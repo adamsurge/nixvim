@@ -4,8 +4,6 @@ This repository contains my personal configuration NixVim, a Neovim configuratio
 
 _My custom version of [dc-tec's NixVim Config](https://github.com/dc-tec/nixvim)_
 
-![Neovim](./.docs/images/neovim.png)
-
 ## How to use
 
 You can use this flake as an input:
