@@ -1,4 +1,4 @@
-_: {
+{
   plugins.navic = {
     enable = true;
     settings = {

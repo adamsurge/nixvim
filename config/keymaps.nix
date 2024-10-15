@@ -401,5 +401,11 @@
       action = "<cmd>tabprevious<cr>";
       options = {desc = "Previous Tab";};
     }
+    {
+      mode = "n";
+      key = "<leader>F";
+      action = "<cmd>Format<cr>";
+      options = {desc = "Format Buffer";};
+    }
   ];
 }

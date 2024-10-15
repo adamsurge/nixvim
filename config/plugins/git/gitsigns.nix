@@ -1,7 +1,8 @@
-_: {
+{
   plugins.gitsigns = {
     enable = true;
     settings = {
+      trouble = true;
       signs = {
         add = {
           text = " ";

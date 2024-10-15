@@ -7,15 +7,15 @@
           light = "macchiato";
           dark = "mocha";
         };
-        custom_highlights = ''
-          function(highlights)
-            return {
-            CursorLineNr = { fg = highlights.peach, style = {} },
-            NavicText = { fg = highlights.text },
-            }
-          end
-        '';
-        flavour = "macchiato"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
+        # custom_highlights = ''
+        #   function(highlights)
+        #     return {
+        #     CursorLineNr = { fg = highlights.peach, style = {} },
+        #     NavicText = { fg = highlights.text },
+        #     }
+        #   end
+        # '';
+        flavour = "mocha"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
         no_bold = false;
         no_italic = false;
         no_underline = false;
@@ -26,6 +26,8 @@
           gitsigns = true;
           neotree = true;
           which_key = true;
+          flash = true;
+          fidget = true;
           illuminate = {
             enabled = true;
             lsp = true;

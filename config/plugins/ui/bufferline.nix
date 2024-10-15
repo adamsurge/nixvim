@@ -24,6 +24,10 @@
     };
   };
 
+  extraConfigLua = ''
+    require('bufferline.groups').builtin.pinned:with({ icon = "" })
+  '';
+
   keymaps = [
     {
       mode = "n";

@@ -1,4 +1,4 @@
-_: {
+{
   imports = [
     # General Configuration
     ./settings.nix
@@ -7,11 +7,11 @@ _: {
     ./file_types.nix
 
     # Themes
-    ./plugins/themes/default.nix
+    ./plugins/themes/catppuccin.nix
 
     # Completion
     ./plugins/cmp/cmp.nix
-    ./plugins/cmp/cmp-copilot.nix
+    # ./plugins/cmp/cmp-copilot.nix
     ./plugins/cmp/lspkind.nix
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/schemastore.nix
@@ -26,18 +26,24 @@ _: {
     ./plugins/editor/illuminate.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/todo-comments.nix
-    ./plugins/editor/copilot-chat.nix
+    # ./plugins/editor/copilot-chat.nix
     ./plugins/editor/navic.nix
+    ./plugins/editor/oil.nix
+    ./plugins/editor/flash.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
     ./plugins/ui/startup.nix
+    ./plugins/ui/dressing.nix
+    ./plugins/ui/noice.nix
 
     # LSP and formatting
     ./plugins/lsp/lsp.nix
     ./plugins/lsp/conform.nix
     ./plugins/lsp/fidget.nix
+    ./plugins/lsp/trouble.nix
+    ./plugins/lsp/dap.nix
 
     # Git
     ./plugins/git/lazygit.nix
@@ -47,9 +53,13 @@ _: {
     ./plugins/utils/telescope.nix
     ./plugins/utils/whichkey.nix
     ./plugins/utils/extra_plugins.nix
+    ./plugins/utils/web-devicons.nix
     ./plugins/utils/mini.nix
     ./plugins/utils/markdown-preview.nix
-    ./plugins/utils/obsidian.nix
+    # ./plugins/utils/obsidian.nix
     ./plugins/utils/toggleterm.nix
+
+    # Languages
+    ./plugins/langs/rust.nix
   ];
 }

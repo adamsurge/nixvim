@@ -7,8 +7,7 @@
     };
     progress = {
       pollRate = 0; # How and when to poll for progress messages
-      suppressOnInsert = true; # Suppress new messages while in insert mode
-      ignoreDoneAlready = false; # Ignore new tasks that are already complete
+      suppressOnInsert = true; # Suppress new messages while in insert mode ignoreDoneAlready = false; # Ignore new tasks that are already complete
       ignoreEmptyMessage = false; # Ignore new tasks that don't contain a message
       clearOnDetach =
         # Clear notification group when LSP server detaches
