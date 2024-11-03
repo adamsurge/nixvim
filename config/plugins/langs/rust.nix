@@ -6,5 +6,6 @@
 
   extraPackages = with pkgs; [
     lldb
+    rustfmt
   ];
 }
