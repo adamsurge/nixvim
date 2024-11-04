@@ -76,25 +76,49 @@
     }
     {
       mode = "n";
-      key = "<C-Up>";
+      key = "<C-S-Up>";
       action = "<cmd>resize +2<cr>";
       options = {desc = "Increase Window Height";};
     }
     {
       mode = "n";
-      key = "<C-Down>";
+      key = "<C-S-Down>";
       action = "<cmd>resize -2<cr>";
       options = {desc = "Decrease Window Height";};
     }
     {
       mode = "n";
-      key = "<C-Left>";
+      key = "<C-S-Left>";
       action = "<cmd>vertical resize -2<cr>";
       options = {desc = "Decrease Window Width";};
     }
     {
       mode = "n";
-      key = "<C-Right>";
+      key = "<C-S-Right>";
+      action = "<cmd>vertical resize +2<cr>";
+      options = {desc = "Increase Window Width";};
+    }
+    {
+      mode = "n";
+      key = "<C-S-k>";
+      action = "<cmd>resize +2<cr>";
+      options = {desc = "Increase Window Height";};
+    }
+    {
+      mode = "n";
+      key = "<C-S-j>";
+      action = "<cmd>resize -2<cr>";
+      options = {desc = "Decrease Window Height";};
+    }
+    {
+      mode = "n";
+      key = "<C-S-h>";
+      action = "<cmd>vertical resize -2<cr>";
+      options = {desc = "Decrease Window Width";};
+    }
+    {
+      mode = "n";
+      key = "<C-S-l>";
       action = "<cmd>vertical resize +2<cr>";
       options = {desc = "Increase Window Width";};
     }
