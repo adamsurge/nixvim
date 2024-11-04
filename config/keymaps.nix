@@ -76,6 +76,42 @@
     }
     {
       mode = "n";
+      key = "<C-Left>";
+      action = "<C-w>h";
+      options = {
+        desc = "Go to Left Window";
+        remap = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<C-Down>";
+      action = "<C-w>j";
+      options = {
+        desc = "Go to Lower Window";
+        remap = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<C-Up>";
+      action = "<C-w>k";
+      options = {
+        desc = "Go to Upper Window";
+        remap = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<C-Right>";
+      action = "<C-w>l";
+      options = {
+        desc = "Go to Right Window";
+        remap = true;
+      };
+    }
+    {
+      mode = "n";
       key = "<C-S-Up>";
       action = "<cmd>resize +2<cr>";
       options = {desc = "Increase Window Height";};
@@ -326,6 +362,30 @@
     {
       mode = "t";
       key = "<C-l>";
+      action = "<cmd>wincmd l<cr>";
+      options = {desc = "Go to Right Window";};
+    }
+    {
+      mode = "t";
+      key = "<C-Left>";
+      action = "<cmd>wincmd h<cr>";
+      options = {desc = "Go to Left Window";};
+    }
+    {
+      mode = "t";
+      key = "<C-Down>";
+      action = "<cmd>wincmd j<cr>";
+      options = {desc = "Go to Lower Window";};
+    }
+    {
+      mode = "t";
+      key = "<C-Up>";
+      action = "<cmd>wincmd k<cr>";
+      options = {desc = "Go to Upper Window";};
+    }
+    {
+      mode = "t";
+      key = "<C-Right>";
       action = "<cmd>wincmd l<cr>";
       options = {desc = "Go to Right Window";};
     }
