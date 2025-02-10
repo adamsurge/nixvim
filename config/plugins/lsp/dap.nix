@@ -1,31 +1,50 @@
 {
   # From https://github.com/redyf/Neve/blob/719381ea7c123dbe57d6e808e362394d9774b002/config/dap/nvim-dap.nix#L7
 
-  plugins.dap = {
-    enable = true;
-    signs = {
-      dapBreakpoint = {
-        text = "●";
-        texthl = "DapBreakpoint";
+  plugins = {
+    dap = {
+      enable = true;
+      signs = {
+        dapBreakpoint = {
+          text = "●";
+          texthl = "DapBreakpoint";
+        };
+        dapBreakpointCondition = {
+          text = "●";
+          texthl = "DapBreakpointCondition";
+        };
+        dapLogPoint = {
+          text = "◆";
+          texthl = "DapLogPoint";
+        };
       };
-      dapBreakpointCondition = {
-        text = "●";
-        texthl = "DapBreakpointCondition";
+      extensions = {
       };
-      dapLogPoint = {
-        text = "◆";
-        texthl = "DapLogPoint";
+      configurations = {
+        java = [
+          {
+            type = "java";
+            request = "launch";
+            name = "Debug (Attach) - Remote";
+            hostName = "127.0.0.1";
+            port = 5005;
+          }
+        ];
       };
     };
-    extensions = {
-      dap-go = {
-        enable = true;
-      };
-      dap-python = {
-        enable = true;
-      };
-      dap-ui = {
-        enable = true;
+
+    dap-virtual-text = {
+      enable = true;
+    };
+    dap-python = {
+      enable = true;
+    };
+    dap-go = {
+      enable = true;
+    };
+    dap-ui = {
+      enable = true;
+      settings = {
         floating.mappings = {
           close = [
             "<ESC>"
@@ -33,20 +52,6 @@
           ];
         };
       };
-      dap-virtual-text = {
-        enable = true;
-      };
-    };
-    configurations = {
-      java = [
-        {
-          type = "java";
-          request = "launch";
-          name = "Debug (Attach) - Remote";
-          hostName = "127.0.0.1";
-          port = 5005;
-        }
-      ];
     };
   };
 

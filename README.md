@@ -105,7 +105,7 @@ home-manager.users.<user>.home.packages = [
 
 ### Langs
 
-- `rust.nix`: Configures rust specific information
+- `rust.nix`: _Disabled (broken)_ Configures rust specific information
 
 Please refer to the individual `.nix` files for more detailed configuration information.
 

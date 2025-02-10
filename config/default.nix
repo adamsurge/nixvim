@@ -60,6 +60,6 @@
     ./plugins/utils/toggleterm.nix
 
     # Languages
-    ./plugins/langs/rust.nix
+    # ./plugins/langs/rust.nix
   ];
 }
