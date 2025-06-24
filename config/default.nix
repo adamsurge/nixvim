@@ -11,7 +11,7 @@
 
     # Completion
     ./plugins/cmp/cmp.nix
-    # ./plugins/cmp/cmp-copilot.nix
+    ./plugins/cmp/cmp-copilot.nix
     ./plugins/cmp/lspkind.nix
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/schemastore.nix
@@ -26,7 +26,7 @@
     ./plugins/editor/illuminate.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/todo-comments.nix
-    # ./plugins/editor/copilot-chat.nix
+    ./plugins/editor/copilot-chat.nix
     ./plugins/editor/navic.nix
     ./plugins/editor/oil.nix
     ./plugins/editor/flash.nix
