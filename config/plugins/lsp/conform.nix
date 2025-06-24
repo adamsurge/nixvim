@@ -2,12 +2,25 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   config = {
     extraConfigLuaPre =
       # lua
       ''
         local slow_format_filetypes = {}
+
+        vim.api.nvim_create_user_command("Format", function(args)
+          local range = nil
+          if args.count ~= -1 then
+            local end_line = vim.api.nvim_buf_get_lines(0, args.line2 - 1, args.line2, true)[1]
+            range = {
+              start = { args.line1, 0 },
+              ["end"] = { args.line2, end_line:len() },
+            }
+          end
+          require("conform").format({ async = true, lsp_format = "fallback", range = range })
+        end, { range = true })
 
         vim.api.nvim_create_user_command("FormatDisable", function(args)
            if args.bang then
@@ -20,12 +33,14 @@
           desc = "Disable autoformat-on-save",
           bang = true,
         })
+
         vim.api.nvim_create_user_command("FormatEnable", function()
           vim.b.disable_autoformat = false
           vim.g.disable_autoformat = false
         end, {
           desc = "Re-enable autoformat-on-save",
         })
+
         vim.api.nvim_create_user_command("FormatToggle", function(args)
           if args.bang then
             -- Toggle formatting for current buffer
@@ -42,39 +57,43 @@
     plugins.conform-nvim = {
       enable = true;
       settings = {
-        format_on_save = ''
-          function(bufnr)
-            if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-              return
-            end
-
-            if slow_format_filetypes[vim.bo[bufnr].filetype] then
-              return
-            end
-
-            local function on_format(err)
-              if err and err:match("timeout$") then
-                slow_format_filetypes[vim.bo[bufnr].filetype] = true
+        format_on_save =
+          # lua
+          ''
+            function(bufnr)
+              if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                return
               end
+
+              if slow_format_filetypes[vim.bo[bufnr].filetype] then
+                return
+              end
+
+              local function on_format(err)
+                if err and err:match("timeout$") then
+                  slow_format_filetypes[vim.bo[bufnr].filetype] = true
+                end
+              end
+
+              return { timeout_ms = 200, lsp_fallback = true }, on_format
+             end
+          '';
+
+        format_after_save =
+          # lua
+          ''
+            function(bufnr)
+              if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                return
+              end
+
+              if not slow_format_filetypes[vim.bo[bufnr].filetype] then
+                return
+              end
+
+              return { lsp_fallback = true }
             end
-
-            return { timeout_ms = 200, lsp_fallback = true }, on_format
-           end
-        '';
-
-        format_after_save = ''
-          function(bufnr)
-            if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-              return
-            end
-
-            if not slow_format_filetypes[vim.bo[bufnr].filetype] then
-              return
-            end
-
-            return { lsp_fallback = true }
-          end
-        '';
+          '';
         notify_on_error = true;
         formatters_by_ft = {
           html = {
@@ -101,8 +120,8 @@
             "black"
             "isort"
           ];
-          lua = ["stylua"];
-          nix = ["nixfmt-rfc-style"];
+          lua = [ "stylua" ];
+          nix = [ "nixfmt-rfc-style" ];
           markdown = {
             __unkeyed-1 = "prettierd";
             __unkeyed-2 = "prettier";
@@ -113,15 +132,15 @@
             __unkeyed-2 = "prettier";
             stop_after_first = true;
           };
-          terraform = ["terraform_fmt"];
-          bicep = ["bicep"];
+          terraform = [ "terraform_fmt" ];
+          bicep = [ "bicep" ];
           bash = [
             "shellcheck"
             "shellharden"
             "shfmt"
           ];
-          json = ["jq"];
-          "_" = ["trim_whitespace"];
+          json = [ "jq" ];
+          "_" = [ "trim_whitespace" ];
         };
 
         formatters = {
