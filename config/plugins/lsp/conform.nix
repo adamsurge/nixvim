@@ -39,21 +39,6 @@
           bang = true,
         })
       '';
-    extraConfigLua =
-      # Lua - Cannot be in Pre as it gets overwritten
-      ''
-        vim.api.nvim_create_user_command("Format", function(args)
-          local range = nil
-          if args.count ~= -1 then
-            local end_line = vim.api.nvim_buf_get_lines(0, args.line2 - 1, args.line2, true)[1]
-            range = {
-              start = { args.line1, 0 },
-              ["end"] = { args.line2, end_line:len() },
-            }
-          end
-          require("conform").format({ async = true, lsp_format = "fallback", range = range })
-        end, { range = true })
-      '';
     plugins.conform-nvim = {
       enable = true;
       settings = {
@@ -92,48 +77,42 @@
         '';
         notify_on_error = true;
         formatters_by_ft = {
-          html = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          css = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          javascript = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          typescript = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
+          html = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
+          css = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
+          javascript = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
+          typescript = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
           python = [
             "black"
             "isort"
           ];
           lua = ["stylua"];
-          nix = ["alejandra"];
-          markdown = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          yaml = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
+          nix = ["nixfmt-rfc-style"];
+          markdown = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
+          yaml = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
           terraform = ["terraform_fmt"];
           bicep = ["bicep"];
           bash = [
@@ -151,6 +130,9 @@
           };
           isort = {
             command = "${lib.getExe pkgs.isort}";
+          };
+          nixfmt-rfc-style = {
+            command = "${lib.getExe pkgs.nixfmt-rfc-style}";
           };
           alejandra = {
             command = "${lib.getExe pkgs.alejandra}";
