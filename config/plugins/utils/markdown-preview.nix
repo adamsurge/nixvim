@@ -3,9 +3,11 @@
     markdown-preview = {
       enable = true;
       settings = {
+        auto_start = 1;
         browser = "firefox";
         echo_preview_url = 1;
         port = "6969";
+        page_title = "「\${name}」";
         preview_options = {
           disable_filename = 1;
           disable_sync_scroll = 1;
