@@ -1,5 +1,9 @@
 {
   imports = [
+    # AI
+    ./plugins/ai/copilot.nix
+    ./plugins/ai/avante.nix
+
     # General Configuration
     ./settings.nix
     ./keymaps.nix
@@ -11,7 +15,7 @@
 
     # Completion
     ./plugins/cmp/cmp.nix
-    ./plugins/cmp/cmp-copilot.nix
+    # ./plugins/cmp/cmp-copilot.nix
     ./plugins/cmp/lspkind.nix
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/schemastore.nix
@@ -26,10 +30,11 @@
     ./plugins/editor/illuminate.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/todo-comments.nix
-    ./plugins/editor/copilot-chat.nix
+    # ./plugins/editor/copilot-chat.nix
     ./plugins/editor/navic.nix
     ./plugins/editor/oil.nix
     ./plugins/editor/flash.nix
+    ./plugins/editor/render-markdown.nix
 
     # UI plugins
     ./plugins/ui/bufferline.nix
@@ -37,6 +42,7 @@
     ./plugins/ui/startup.nix
     ./plugins/ui/dressing.nix
     ./plugins/ui/noice.nix
+    ./plugins/ui/nui.nix
 
     # LSP and formatting
     ./plugins/lsp/lsp.nix
@@ -58,6 +64,7 @@
     ./plugins/utils/markdown-preview.nix
     # ./plugins/utils/obsidian.nix
     ./plugins/utils/toggleterm.nix
+    ./plugins/utils/lazyloader.nix
 
     # Languages
     # ./plugins/langs/rust.nix

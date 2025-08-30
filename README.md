@@ -43,6 +43,11 @@ home-manager.users.<user>.home.packages = [
 - `auto_cmds.nix`: Sets up automatic commands.
 - `file_types.nix`: Configures file type specific settings.
 
+### AI
+
+- `copilot.nix`: Configures copilot for use (mainly for avante). Use `:Copilot auth` to sign-in
+- `avanete.nix`: Adds similar behaviour to Cursor AI IDE.
+
 ### Themes
 
 - `default.nix`: Sets the default theme.
@@ -50,7 +55,7 @@ home-manager.users.<user>.home.packages = [
 ### Completion
 
 - `cmp.nix`: Configures the cmp completion framework.
-- `cmp-copilot.nix`: Adds GitHub Copilot support to cmp.
+- `cmp-copilot.nix`: _Disabled_ Adds GitHub Copilot support to cmp.
 - `lspkind.nix`: Adds icons to lsp completion items.
 - `autopairs.nix`: Adds the autopairs plugin.
 - `schemastore.nix`: Adds the schemastore plugin for JSON and YAML schemas.
@@ -68,7 +73,7 @@ home-manager.users.<user>.home.packages = [
 - `illuminate.nix`: Configures the Illuminate plugin for highlighting other uses of the current word under the cursor.
 - `indent-blankline.nix`: Configures the Indent Blankline plugin for displaying indentation levels.
 - `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
-- `copilot-chat.nix`: Configures the Copilot Chat plugin for interacting with GitHub Copilot.
+- `copilot-chat.nix`: _Disabled_ Configures the Copilot Chat plugin for interacting with GitHub Copilot.
 - `navic.nix`: Configures the Navic plugin, shows the current code context.
 - `flash.nix`: Configures the flash plugin, better navigation in buffers.
 
@@ -99,9 +104,10 @@ home-manager.users.<user>.home.packages = [
 - `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
 - `extra_plugins.nix`: Configures additional plugins.
 - `mini.nix`: Configures the Mini plugin.
-- `obsidian.nix`: _Disabled:_ Confiugres the Obsidian plugin, for note-taking purposes.
+- `obsidian.nix`: _Disabled_ Confiugres the Obsidian plugin, for note-taking purposes.
 - `markdown-preview.nix`: Configures the Markdown Preview plugin.
 - `toggleterm.nix`: Configures Terminal plugin.
+- `lazyloader.nix`: Enables lazy loading with ln-z.
 
 ### Langs
 
@@ -120,8 +126,6 @@ Possible plugins to look into adding.
 - [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf) - Better quickfix (don't really use this at the moment but look into it)
 - [aerial.nvim](https://github.com/stevearc/aerial.nvim?tab=readme-ov-file#api) - Code outliner
 - [Neorg](https://github.com/nvim-neorg/neorg?tab=readme-ov-file) - Note taking
-- [gen.nvim](https://github.com/David-Kunz/gen.nvim?tab=readme-ov-file) - Local AI code completion with Ollama
-- [codeium.nvim](https://github.com/Exafunction/codeium.nvim) - Codeium AI code completion
 
 ## References
 
