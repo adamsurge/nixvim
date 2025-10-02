@@ -4,6 +4,11 @@
   ...
 }: {
   config = {
+    extraPackages = with pkgs; [
+      # lldb
+      rustfmt
+    ];
+
     extraConfigLuaPre =
       # lua
       ''
@@ -119,6 +124,7 @@
             "black"
             "isort"
           ];
+          rust = ["rustfmt"];
           lua = ["stylua"];
           nix = ["alejandra"];
           markdown = {
