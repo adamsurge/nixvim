@@ -289,6 +289,12 @@
     }
     {
       mode = "n";
+      key = "<leader>ch";
+      action = "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>";
+      options = {desc = "Toggle Inlay Hints";};
+    }
+    {
+      mode = "n";
       key = "]d";
       action = "diagnostic_goto(true)";
       options = {desc = "Next Diagnostic";};
