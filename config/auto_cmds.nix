@@ -26,7 +26,7 @@
       callback = {
         __raw = ''
           function()
-            vim.cmd('Startup')
+            pcall(vim.cmd, "Startup")
           end
         '';
       };

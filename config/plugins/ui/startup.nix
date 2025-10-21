@@ -2,6 +2,8 @@
   plugins.startup = {
     enable = true;
     settings = {
+      theme = "dashboard";
+
       colors = {
         background = "#ffffff";
         foldedSection = "#ffffff";
