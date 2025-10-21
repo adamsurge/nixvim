@@ -51,6 +51,14 @@
         qmlls = {
           enable = true;
         };
+        gdscript = {
+          enable = true;
+          package = null;
+        };
+        gdshader_lsp = {
+          enable = true;
+          package = null;
+        };
         helm_ls = {
           enable = true;
           extraOptions = {

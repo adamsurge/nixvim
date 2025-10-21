@@ -68,5 +68,6 @@
 
     # Languages
     # ./plugins/langs/rust.nix
+    ./plugins/langs/godot.nix
   ];
 }
