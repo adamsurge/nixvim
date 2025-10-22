@@ -39,6 +39,24 @@
       };
     }
     {
+      mode = ["v"];
+      key = ">";
+      action = ">gv";
+      options = {
+        desc = "Indent Left";
+        silent = true;
+      };
+    }
+    {
+      mode = ["v"];
+      key = "<";
+      action = "<gv";
+      options = {
+        desc = "Indent Right";
+        silent = true;
+      };
+    }
+    {
       mode = "n";
       key = "<C-h>";
       action = "<C-w>h";
