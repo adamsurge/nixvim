@@ -3,6 +3,7 @@
     # AI
     ./plugins/ai/copilot.nix
     ./plugins/ai/avante.nix
+    ./plugins/ai/mcphub.nix
 
     # General Configuration
     ./settings.nix

@@ -1,5 +1,5 @@
 {
-  description = "deCort.tech NeoVim configuration";
+  description = "My NeoVim configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -11,6 +11,14 @@
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
     };
+    mcp-hub = {
+      url = "github:ravitemer/mcp-hub";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    mcphub-nvim = {
+      url = "github:ravitemer/mcphub.nvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -18,6 +26,7 @@
     nixvim,
     flake-parts,
     pre-commit-hooks,
+    mcphub-nvim,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -32,9 +41,14 @@
       }: let
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
+
+        mcp-hub = inputs.mcp-hub.packages."${system}".default;
+        mcphub-nvim = inputs.mcphub-nvim.packages.${system}.default;
+
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
           module = ./config;
+          extraSpecialArgs = {inherit mcphub-nvim mcp-hub;};
         };
       in {
         checks = {
@@ -56,8 +70,9 @@
         packages.default = nvim;
 
         devShells = {
-          default = with pkgs;
-            mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
+          default = pkgs.mkShell {
+            inherit (self'.checks.pre-commit-check) shellHook;
+          };
         };
       };
     };
