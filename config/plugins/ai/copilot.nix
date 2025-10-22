@@ -12,7 +12,7 @@
         auto_trigger = true;
         hide_during_completion = false;
         keymap = {
-          accept = "<C-CR>";
+          accept = "<A-CR>";
         };
       };
     };
