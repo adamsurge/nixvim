@@ -30,6 +30,7 @@
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/treesitter.nix
+    ./plugins/editor/zellij-nav.nix
 
     # Git
     ./plugins/git/gitsigns.nix
