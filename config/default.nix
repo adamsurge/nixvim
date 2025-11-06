@@ -32,6 +32,7 @@
     ./plugins/editor/render-markdown.nix
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/treesitter.nix
+    ./plugins/editor/treesj.nix
     ./plugins/editor/ufo.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/zellij-nav.nix

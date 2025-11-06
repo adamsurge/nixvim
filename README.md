@@ -66,7 +66,6 @@ home-manager.users.<user>.home.packages = [
 
 ### Editor Plugins and Configurations
 
-
 - `arrow.nix`: Configures the arrow plugin, adds file bookmarks.
 - `copilot-chat.nix`: _Disabled_ Configures the Copilot Chat plugin for interacting with GitHub Copilot.
 - `flash.nix`: Configures the flash plugin, better navigation in buffers.
@@ -79,9 +78,9 @@ home-manager.users.<user>.home.packages = [
 - `oil.nix`: Configures the oil file explorer.
 - `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
 - `treesitter.nix`: Configures the TreeSitter syntax highlighter.
+- `treesj.nix`: Configures the treesj plugin for splitting/joining code blocks.
 - `ufo.nix`: Configures the nvim-ufo plugin for better folding with treesitter and indent providers.
 - `undotree.nix`: Configures the UndoTree undo history visualizer.
-
 
 ### UI Plugins
 
@@ -127,7 +126,6 @@ Please refer to the individual `.nix` files for more detailed configuration info
 
 Possible plugins to look into adding.
 
-- [TreeSJ](https://github.com/Wansmer/treesj) - Better splitting/joining blocks of code like arrays, hashes, statements, objects, dictionaries, etc.
 - [Neogen](https://github.com/danymat/neogen?tab=readme-ov-file#supported-languages) - Add annotations/docstrings following standards with easy editing
 - [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf) - Better quickfix (don't really use this at the moment but look into it)
 - [aerial.nvim](https://github.com/stevearc/aerial.nvim?tab=readme-ov-file#api) - Code outliner
