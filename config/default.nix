@@ -56,6 +56,7 @@
 
     # UI plugins
     ./plugins/ui/bufferline.nix
+    ./plugins/ui/colorizer.nix
     ./plugins/ui/dressing.nix
     ./plugins/ui/lualine.nix
     ./plugins/ui/noice.nix

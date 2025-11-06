@@ -101,6 +101,7 @@ home-manager.users.<user>.home.packages = [
 
 ### Utils
 
+- `colorizer.nix`: Configures the colorizer plugin for highlighting colours in the editor.
 - `extra_plugins.nix`: Configures additional plugins.
 - `lazyloader.nix`: Enables lazy loading with ln-z.
 - `markdown-preview.nix`: Configures the Markdown Preview plugin.
