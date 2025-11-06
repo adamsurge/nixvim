@@ -38,15 +38,15 @@ home-manager.users.<user>.home.packages = [
 
 ### General Configuration
 
-- `settings.nix`: Contains general settings for Neovim.
-- `keymaps.nix`: Defines key mappings.
 - `auto_cmds.nix`: Sets up automatic commands.
 - `file_types.nix`: Configures file type specific settings.
+- `keymaps.nix`: Defines key mappings.
+- `settings.nix`: Contains general settings for Neovim.
 
 ### AI
 
-- `copilot.nix`: Configures copilot for use (mainly for avante). Use `:Copilot auth` to sign-in
 - `avanete.nix`: Adds similar behaviour to Cursor AI IDE.
+- `copilot.nix`: Configures copilot for use (mainly for avante). Use `:Copilot auth` to sign-in
 
 ### Themes
 
@@ -54,10 +54,10 @@ home-manager.users.<user>.home.packages = [
 
 ### Completion
 
-- `cmp.nix`: Configures the cmp completion framework.
-- `cmp-copilot.nix`: _Disabled_ Adds GitHub Copilot support to cmp.
-- `lspkind.nix`: Adds icons to lsp completion items.
 - `autopairs.nix`: Adds the autopairs plugin.
+- `cmp-copilot.nix`: _Disabled_ Adds GitHub Copilot support to cmp.
+- `cmp.nix`: Configures the cmp completion framework.
+- `lspkind.nix`: Adds icons to lsp completion items.
 - `schemastore.nix`: Adds the schemastore plugin for JSON and YAML schemas.
 
 ### Snippets
@@ -66,52 +66,53 @@ home-manager.users.<user>.home.packages = [
 
 ### Editor Plugins and Configurations
 
-- `neo-tree.nix`: Configures the NeoTree file explorer.
-- `oil.nix`: Configures the oil file explorer.
-- `treesitter.nix`: Configures the TreeSitter syntax highlighter.
-- `undotree.nix`: Configures the UndoTree undo history visualizer.
-- `illuminate.nix`: Configures the Illuminate plugin for highlighting other uses of the current word under the cursor.
-- `indent-blankline.nix`: Configures the Indent Blankline plugin for displaying indentation levels.
-- `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
 - `copilot-chat.nix`: _Disabled_ Configures the Copilot Chat plugin for interacting with GitHub Copilot.
-- `navic.nix`: Configures the Navic plugin, shows the current code context.
 - `flash.nix`: Configures the flash plugin, better navigation in buffers.
 - `grug-far`: Configures the gurg-far plugin, easier find/replace.
+- `illuminate.nix`: Configures the Illuminate plugin for highlighting other uses of the current word under the cursor.
+- `indent-blankline.nix`: Configures the Indent Blankline plugin for displaying indentation levels.
+- `navic.nix`: Configures the Navic plugin, shows the current code context.
+- `neo-tree.nix`: Configures the NeoTree file explorer.
+- `oil.nix`: Configures the oil file explorer.
+- `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
+- `treesitter.nix`: Configures the TreeSitter syntax highlighter.
+- `undotree.nix`: Configures the UndoTree undo history visualizer.
 
 ### UI Plugins
 
 - `bufferline.nix`: Configures the Bufferline plugin for enhanced buffer/tab display.
-- `lualine.nix`: Configures the Lualine status line plugin.
-- `startup.nix`: Configures the startup screen.
 - `dressing.nix`: Configures dressing, improves the default vim.ui interface.
+- `lualine.nix`: Configures the Lualine status line plugin.
 - `noice.nix`: Configures noice, better messages, cmdline and popupmenu.
+- `startup.nix`: Configures the startup screen.
 
 ### LSP
 
-- `lsp.nix`: Configures the Neovim LSP client.
 - `conform.nix`: Configures the Conform plugin for automatic code formatting.
-- `fidget.nix`: Configures the Fidget plugin for displaying LSP diagnostics in the status line.
-- `trouble.nix`: Configures the trouble plugin for viewing of diagnostics
 - `dap.nix`: Configures dap for debugging programs
+- `fidget.nix`: Configures the Fidget plugin for displaying LSP diagnostics in the status line.
+- `lsp.nix`: Configures the Neovim LSP client.
+- `trouble.nix`: Configures the trouble plugin for viewing of diagnostics
 
 ### Git
 
-- `lazygit.nix`: Configures the LazyGit plugin for Git integration.
 - `gitsigns.nix`: Configures the GitSigns plugin for displaying Git diff information.
+- `lazygit.nix`: Configures the LazyGit plugin for Git integration.
 
 ### Utils
 
-- `telescope.nix`: Configures the Telescope plugin for fuzzy finding and picking.
-- `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
 - `extra_plugins.nix`: Configures additional plugins.
+- `lazyloader.nix`: Enables lazy loading with ln-z.
+- `markdown-preview.nix`: Configures the Markdown Preview plugin.
 - `mini.nix`: Configures the Mini plugin.
 - `obsidian.nix`: _Disabled_ Confiugres the Obsidian plugin, for note-taking purposes.
-- `markdown-preview.nix`: Configures the Markdown Preview plugin.
+- `telescope.nix`: Configures the Telescope plugin for fuzzy finding and picking.
 - `toggleterm.nix`: Configures Terminal plugin.
-- `lazyloader.nix`: Enables lazy loading with ln-z.
+- `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
 
 ### Langs
 
+- `godot.nix`: Configures godot specific information
 - `rust.nix`: _Disabled (broken)_ Configures rust specific information
 
 Please refer to the individual `.nix` files for more detailed configuration information.

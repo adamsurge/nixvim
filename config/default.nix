@@ -6,10 +6,10 @@
     ./plugins/ai/mcphub.nix
 
     # General Configuration
-    ./settings.nix
-    ./keymaps.nix
     ./auto_cmds.nix
     ./file_types.nix
+    ./keymaps.nix
+    ./settings.nix
 
     # Completion
     ./plugins/cmp/autopairs.nix
@@ -29,8 +29,8 @@
     ./plugins/editor/oil.nix
     ./plugins/editor/render-markdown.nix
     ./plugins/editor/todo-comments.nix
-    ./plugins/editor/undotree.nix
     ./plugins/editor/treesitter.nix
+    ./plugins/editor/undotree.nix
     ./plugins/editor/zellij-nav.nix
 
     # Git
