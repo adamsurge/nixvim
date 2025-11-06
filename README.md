@@ -79,6 +79,7 @@ home-manager.users.<user>.home.packages = [
 - `oil.nix`: Configures the oil file explorer.
 - `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
 - `treesitter.nix`: Configures the TreeSitter syntax highlighter.
+- `ufo.nix`: Configures the nvim-ufo plugin for better folding with treesitter and indent providers.
 - `undotree.nix`: Configures the UndoTree undo history visualizer.
 
 
@@ -126,7 +127,6 @@ Please refer to the individual `.nix` files for more detailed configuration info
 
 Possible plugins to look into adding.
 
-- [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) - Better folding
 - [TreeSJ](https://github.com/Wansmer/treesj) - Better splitting/joining blocks of code like arrays, hashes, statements, objects, dictionaries, etc.
 - [Neogen](https://github.com/danymat/neogen?tab=readme-ov-file#supported-languages) - Add annotations/docstrings following standards with easy editing
 - [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf) - Better quickfix (don't really use this at the moment but look into it)
