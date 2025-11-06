@@ -41,7 +41,7 @@
           indent_blankline.enabled = true;
           mini = {
             enabled = true;
-            indentscope_color = "rosewater";
+            indentscope_color = "mauve";
           };
           native_lsp = {
             enabled = true;
