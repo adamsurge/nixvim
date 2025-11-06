@@ -66,6 +66,8 @@ home-manager.users.<user>.home.packages = [
 
 ### Editor Plugins and Configurations
 
+
+- `arrow.nix`: Configures the arrow plugin, adds file bookmarks.
 - `copilot-chat.nix`: _Disabled_ Configures the Copilot Chat plugin for interacting with GitHub Copilot.
 - `flash.nix`: Configures the flash plugin, better navigation in buffers.
 - `grug-far`: Configures the gurg-far plugin, easier find/replace.
@@ -124,7 +126,6 @@ Please refer to the individual `.nix` files for more detailed configuration info
 
 Possible plugins to look into adding.
 
-- [Harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Specify projects/frequent files to get to them easier
 - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) - Better folding
 - [TreeSJ](https://github.com/Wansmer/treesj) - Better splitting/joining blocks of code like arrays, hashes, statements, objects, dictionaries, etc.
 - [Neogen](https://github.com/danymat/neogen?tab=readme-ov-file#supported-languages) - Add annotations/docstrings following standards with easy editing
