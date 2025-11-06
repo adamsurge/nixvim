@@ -87,7 +87,6 @@ home-manager.users.<user>.home.packages = [
 - `bufferline.nix`: Configures the Bufferline plugin for enhanced buffer/tab display.
 - `lualine.nix`: Configures the Lualine status line plugin.
 - `noice.nix`: Configures noice, better messages, cmdline and popupmenu.
-- `startup.nix`: Configures the startup screen.
 
 ### LSP
 
