@@ -66,7 +66,7 @@
     # Utils
     ./plugins/utils/extra_plugins.nix
     ./plugins/utils/lazyloader.nix
-    ./plugins/utils/markdown-preview.nix
+    # ./plugins/utils/markdown-preview.nix
     ./plugins/utils/mini.nix
     # ./plugins/utils/obsidian.nix
     ./plugins/utils/telescope.nix
