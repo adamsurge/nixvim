@@ -24,6 +24,7 @@
     ./plugins/editor/grug-far.nix
     ./plugins/editor/illuminate.nix
     ./plugins/editor/indent-blankline.nix
+    ./plugins/editor/marks.nix
     ./plugins/editor/navic.nix
     ./plugins/editor/neo-tree.nix
     ./plugins/editor/oil.nix

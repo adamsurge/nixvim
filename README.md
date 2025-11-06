@@ -71,12 +71,14 @@ home-manager.users.<user>.home.packages = [
 - `grug-far`: Configures the gurg-far plugin, easier find/replace.
 - `illuminate.nix`: Configures the Illuminate plugin for highlighting other uses of the current word under the cursor.
 - `indent-blankline.nix`: Configures the Indent Blankline plugin for displaying indentation levels.
+- `marks.nix`: Configures the marks plugin, better interacting with marks.
 - `navic.nix`: Configures the Navic plugin, shows the current code context.
 - `neo-tree.nix`: Configures the NeoTree file explorer.
 - `oil.nix`: Configures the oil file explorer.
 - `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
 - `treesitter.nix`: Configures the TreeSitter syntax highlighter.
 - `undotree.nix`: Configures the UndoTree undo history visualizer.
+
 
 ### UI Plugins
 
