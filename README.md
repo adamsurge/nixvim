@@ -110,6 +110,7 @@ home-manager.users.<user>.home.packages = [
 - `lazyloader.nix`: Enables lazy loading with ln-z.
 - `markdown-preview.nix`: _Disabled_ Configures the Markdown Preview plugin.
 - `mini.nix`: Configures the Mini plugin.
+- `neoclip.nix`: Configures the neoclip plugin for clipboard history management.
 - `obsidian.nix`: _Disabled_ Confiugres the Obsidian plugin, for note-taking purposes.
 - `telescope.nix`: Configures the Telescope plugin for fuzzy finding and picking.
 - `toggleterm.nix`: Configures Terminal plugin.

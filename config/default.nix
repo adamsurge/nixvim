@@ -72,6 +72,7 @@
     ./plugins/utils/lazyloader.nix
     # ./plugins/utils/markdown-preview.nix
     ./plugins/utils/mini.nix
+    ./plugins/utils/neoclip.nix
     # ./plugins/utils/obsidian.nix
     ./plugins/utils/telescope.nix
     ./plugins/utils/toggleterm.nix
