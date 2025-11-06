@@ -111,7 +111,7 @@ home-manager.users.<user>.home.packages = [
 - `neoclip.nix`: Configures the neoclip plugin for clipboard history management.
 - `obsidian.nix`: _Disabled_ Confiugres the Obsidian plugin, for note-taking purposes.
 - `snacks.nix`: Configures snacks.nvim plugin, a collection of small QoL plugins.
-- `telescope.nix`: Configures the Telescope plugin for fuzzy finding and picking.
+- `telescope.nix`: _Disabled (use snacks.nvim#picker)_ Configures the Telescope plugin for fuzzy finding and picking.
 - `toggleterm.nix`: Configures Terminal plugin.
 - `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
 

@@ -73,7 +73,7 @@
     ./plugins/utils/neoclip.nix
     # ./plugins/utils/obsidian.nix
     ./plugins/utils/snacks.nix
-    ./plugins/utils/telescope.nix
+    # ./plugins/utils/telescope.nix
     ./plugins/utils/toggleterm.nix
     ./plugins/utils/web-devicons.nix
     ./plugins/utils/whichkey.nix
