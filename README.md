@@ -76,6 +76,7 @@ home-manager.users.<user>.home.packages = [
 - `copilot-chat.nix`: _Disabled_ Configures the Copilot Chat plugin for interacting with GitHub Copilot.
 - `navic.nix`: Configures the Navic plugin, shows the current code context.
 - `flash.nix`: Configures the flash plugin, better navigation in buffers.
+- `grug-far`: Configures the gurg-far plugin, easier find/replace.
 
 ### UI Plugins
 

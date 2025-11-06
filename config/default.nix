@@ -21,6 +21,7 @@
     # Editor plugins and configurations
     # ./plugins/editor/copilot-chat.nix
     ./plugins/editor/flash.nix
+    ./plugins/editor/grug-far.nix
     ./plugins/editor/illuminate.nix
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/navic.nix
