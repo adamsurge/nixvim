@@ -61,7 +61,6 @@
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/colorizer.nix
-    ./plugins/ui/dressing.nix
     ./plugins/ui/lualine.nix
     ./plugins/ui/noice.nix
     ./plugins/ui/nui.nix
@@ -74,6 +73,7 @@
     ./plugins/utils/mini.nix
     ./plugins/utils/neoclip.nix
     # ./plugins/utils/obsidian.nix
+    ./plugins/utils/snacks.nix
     ./plugins/utils/telescope.nix
     ./plugins/utils/toggleterm.nix
     ./plugins/utils/web-devicons.nix

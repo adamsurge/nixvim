@@ -85,7 +85,6 @@ home-manager.users.<user>.home.packages = [
 ### UI Plugins
 
 - `bufferline.nix`: Configures the Bufferline plugin for enhanced buffer/tab display.
-- `dressing.nix`: Configures dressing, improves the default vim.ui interface.
 - `lualine.nix`: Configures the Lualine status line plugin.
 - `noice.nix`: Configures noice, better messages, cmdline and popupmenu.
 - `startup.nix`: Configures the startup screen.
@@ -112,6 +111,7 @@ home-manager.users.<user>.home.packages = [
 - `mini.nix`: Configures the Mini plugin.
 - `neoclip.nix`: Configures the neoclip plugin for clipboard history management.
 - `obsidian.nix`: _Disabled_ Confiugres the Obsidian plugin, for note-taking purposes.
+- `snacks.nix`: Configures snacks.nvim plugin, a collection of small QoL plugins.
 - `telescope.nix`: Configures the Telescope plugin for fuzzy finding and picking.
 - `toggleterm.nix`: Configures Terminal plugin.
 - `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
