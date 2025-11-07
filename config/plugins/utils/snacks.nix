@@ -266,7 +266,7 @@
     }
     {
       mode = "n";
-      key = "<leader>fr";
+      key = "<leader>ft";
       action = ":lua Snacks.picker.grep()<CR>";
       options = {desc = "Find text";};
     }
@@ -382,7 +382,7 @@
       mode = "n";
       key = "<leader>fe";
       action = ":lua Snacks.picker.explorer()<CR>";
-      options = { desc = "File browser"; };
+      options = {desc = "File browser";};
     }
     {
       mode = "n";
