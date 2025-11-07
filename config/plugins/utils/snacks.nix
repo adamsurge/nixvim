@@ -10,7 +10,14 @@
   plugins.snacks = {
     enable = true;
     settings = {
-      input.enabled = true;
+      input = {
+        enabled = true;
+        win = {
+          relative = "cursor";
+          row = -3;
+          col = 0;
+        };
+      };
       quickfile.enabled = true;
       picker = {
         enabled = true;
