@@ -301,6 +301,15 @@
         desc = "Prev Search Result";
       };
     }
+    # Diagnostics keymap grouping
+    {
+      mode = "n";
+      key = "<leader>c";
+      action = "";
+      options = {
+        desc = "code";
+      };
+    }
     {
       mode = "n";
       key = "<leader>cd";
@@ -349,11 +358,29 @@
       action = "diagnostic_goto(false 'WARN')";
       options = {desc = "Prev Warning";};
     }
+    # Quit keymap grouping
+    {
+      mode = "n";
+      key = "<leader>q";
+      action = "";
+      options = {
+        desc = "quit/session";
+      };
+    }
     {
       mode = "n";
       key = "<leader>qq";
       action = "<cmd>qa<cr>";
       options = {desc = "Quit All";};
+    }
+    # UI keymap grouping
+    {
+      mode = "n";
+      key = "<leader>u";
+      action = "";
+      options = {
+        desc = "UI";
+      };
     }
     {
       mode = "n";
@@ -421,6 +448,15 @@
       action = "<cmd>close<cr>";
       options = {desc = "Hide Terminal";};
     }
+    # Window keymap grouping
+    {
+      mode = "n";
+      key = "<leader>w";
+      action = "";
+      options = {
+        desc = "window";
+      };
+    }
     {
       mode = "n";
       key = "<leader>ww";
@@ -473,6 +509,15 @@
       options = {
         desc = "Split Window Right";
         remap = true;
+      };
+    }
+    # Tab keymap grouping
+    {
+      mode = "n";
+      key = "<leader><tab>";
+      action = "";
+      options = {
+        desc = "tab";
       };
     }
     {

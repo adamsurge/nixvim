@@ -251,6 +251,24 @@
       action = "<cmd>lua Snacks.bufdelete.all()<CR>";
       options = {desc = "Delete All Buffers";};
     }
+    # Find keymap grouping
+    {
+      mode = "n";
+      key = "<leader>f";
+      action = "";
+      options = {
+        desc = "find";
+      };
+    }
+    # Search keymap grouping
+    {
+      mode = "n";
+      key = "<leader>s";
+      action = "";
+      options = {
+        desc = "search";
+      };
+    }
     # Snacks Picker keymaps (migrated from telescope)
     {
       mode = "n";

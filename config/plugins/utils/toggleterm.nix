@@ -6,9 +6,18 @@
     };
   };
   keymaps = [
+    # Terminal keymap grouping
     {
       mode = "n";
       key = "<leader>t";
+      action = "";
+      options = {
+        desc = "terminal";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>tt";
       action = "<cmd>ToggleTerm<cr>";
       options = {
         desc = "Toggle Terminal Window";
@@ -19,7 +28,7 @@
       key = "<leader>tv";
       action = "<cmd>ToggleTerm direction=vertical<cr>";
       options = {
-        desc = "Toggle Vertical Terminal Window";
+        desc = "Vertical Terminal Window";
       };
     }
     {
@@ -27,7 +36,7 @@
       key = "<leader>th";
       action = "<cmd>ToggleTerm direction=horizontal<cr>";
       options = {
-        desc = "Toggle Horizontal Terminal Window";
+        desc = "Horizontal Terminal Window";
       };
     }
     {
@@ -35,7 +44,7 @@
       key = "<leader>tf";
       action = "<cmd>ToggleTerm direction=float<cr>";
       options = {
-        desc = "Toggle Floating Terminal Window";
+        desc = "Floating Terminal Window";
       };
     }
   ];
