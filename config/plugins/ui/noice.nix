@@ -14,8 +14,12 @@
         inc_rename = false;
         lsp_doc_border = false;
       };
+      cmdLine = {
+        enabled = true;
+        view = "cmdline";
+      };
       notify.enabled = false;
-      messages.enabled = false;
+      messages.enabled = true;
     };
   };
 }
