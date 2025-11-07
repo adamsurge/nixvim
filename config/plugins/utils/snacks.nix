@@ -199,6 +199,7 @@
           }
         ];
       };
+      lazygit.enabled = true;
     };
   };
 
@@ -389,6 +390,12 @@
       key = "<leader>fE";
       action = ":lua Snacks.picker.explorer({cwd = vim.fn.expand('%:p:h')})<CR>";
       options = {desc = "File browser";};
+    }
+    {
+      mode = "n";
+      key = "<leader>gg";
+      action = ":lua Snacks.lazygit()<CR>";
+      options = {desc = "Lazygit";};
     }
   ];
 }

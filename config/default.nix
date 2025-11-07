@@ -39,7 +39,7 @@
 
     # Git
     ./plugins/git/gitsigns.nix
-    ./plugins/git/lazygit.nix
+    # ./plugins/git/lazygit.nix
 
     # Languages
     ./plugins/langs/godot.nix
