@@ -201,6 +201,11 @@
       };
       lazygit.enabled = true;
       rename.enabled = true;
+      statuscolumn = {
+        enabled = true;
+        left = ["mark" "sign"];
+        right = ["fold" "git"];
+      };
     };
   };
 
