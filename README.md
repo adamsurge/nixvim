@@ -45,12 +45,14 @@ home-manager.users.<user>.home.packages = [
 
 ### AI
 
-- `avanete.nix`: Adds similar behaviour to Cursor AI IDE.
+- `avante.nix`: Adds similar behaviour to Cursor AI IDE.
 - `copilot.nix`: Configures copilot for use (mainly for avante). Use `:Copilot auth` to sign-in
+- `mcphub.nix`: Configures MCP Hub for AI integrations.
 
 ### Themes
 
 - `default.nix`: Sets the default theme.
+- `catppuccin.nix`: Configures the Catppuccin theme.
 
 ### Completion
 
@@ -69,7 +71,7 @@ home-manager.users.<user>.home.packages = [
 - `arrow.nix`: Configures the arrow plugin, adds file bookmarks.
 - `copilot-chat.nix`: _Disabled_ Configures the Copilot Chat plugin for interacting with GitHub Copilot.
 - `flash.nix`: Configures the flash plugin, better navigation in buffers.
-- `grug-far`: Configures the gurg-far plugin, easier find/replace.
+- `grug-far.nix`: Configures the grug-far plugin, easier find/replace.
 - `illuminate.nix`: Configures the Illuminate plugin for highlighting other uses of the current word under the cursor.
 - `indent-blankline.nix`: Configures the Indent Blankline plugin for displaying indentation levels.
 - `marks.nix`: Configures the marks plugin, better interacting with marks.
@@ -81,12 +83,16 @@ home-manager.users.<user>.home.packages = [
 - `treesj.nix`: Configures the treesj plugin for splitting/joining code blocks.
 - `ufo.nix`: Configures the nvim-ufo plugin for better folding with treesitter and indent providers.
 - `undotree.nix`: Configures the UndoTree undo history visualizer.
+- `render-markdown.nix`: Configures the Render Markdown plugin for rendering markdown in the editor.
+- `zellij-nav.nix`: Configures Zellij navigation integration.
 
 ### UI Plugins
 
 - `bufferline.nix`: Configures the Bufferline plugin for enhanced buffer/tab display.
 - `lualine.nix`: Configures the Lualine status line plugin.
 - `noice.nix`: Configures noice, better messages, cmdline and popupmenu.
+- `nui.nix`: Configures the NUI library for UI components.
+- `startup.nix`: Configures the startup screen.
 
 ### LSP
 
@@ -100,6 +106,7 @@ home-manager.users.<user>.home.packages = [
 
 - `gitsigns.nix`: Configures the GitSigns plugin for displaying Git diff information.
 - `lazygit.nix`: Configures the LazyGit plugin for Git integration.
+- `diffview.nix`: Configures the Diffview plugin for enhanced Git diff viewing.
 
 ### Utils
 
@@ -109,11 +116,13 @@ home-manager.users.<user>.home.packages = [
 - `markdown-preview.nix`: _Disabled_ Configures the Markdown Preview plugin.
 - `mini.nix`: Configures the Mini plugin.
 - `neoclip.nix`: Configures the neoclip plugin for clipboard history management.
-- `obsidian.nix`: _Disabled_ Confiugres the Obsidian plugin, for note-taking purposes.
+- `obsidian.nix`: _Disabled_ Configures the Obsidian plugin, for note-taking purposes.
 - `snacks.nix`: Configures snacks.nvim plugin, a collection of small QoL plugins.
 - `telescope.nix`: _Disabled (use snacks.nvim#picker)_ Configures the Telescope plugin for fuzzy finding and picking.
 - `toggleterm.nix`: Configures Terminal plugin.
 - `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
+- `web-devicons.nix`: Configures web devicons for file type icons.
+- `yanky.nix`: Configures the Yanky plugin for enhanced yank operations.
 
 ### Langs
 
