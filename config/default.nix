@@ -73,7 +73,7 @@
     ./plugins/utils/mini.nix
     # ./plugins/utils/neoclip.nix
     # ./plugins/utils/obsidian.nix
-    ./plugins/utils/snacks.nix
+    ./plugins/utils/snacks/default.nix
     ./plugins/utils/yanky.nix
     # ./plugins/utils/telescope.nix
     ./plugins/utils/toggleterm.nix
