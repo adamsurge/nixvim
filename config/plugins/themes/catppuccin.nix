@@ -100,6 +100,7 @@
               ok = ["underline"];
             };
           };
+          aerial = true;
           treesitter_context = true;
           grug_far = true;
           ufo = true;

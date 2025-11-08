@@ -19,8 +19,9 @@
     ./plugins/cmp/schemastore.nix
 
     # Editor plugins and configurations
-    # ./plugins/editor/copilot-chat.nix
+    ./plugins/editor/aerial.nix
     ./plugins/editor/arrow.nix
+    # ./plugins/editor/copilot-chat.nix
     ./plugins/editor/flash.nix
     ./plugins/editor/grug-far.nix
     ./plugins/editor/illuminate.nix
