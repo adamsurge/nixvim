@@ -39,6 +39,7 @@
     ./plugins/editor/zellij-nav.nix
 
     # Git
+    ./plugins/git/diffview.nix
     ./plugins/git/gitsigns.nix
     # ./plugins/git/lazygit.nix
 

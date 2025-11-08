@@ -101,6 +101,7 @@
             };
           };
           aerial = true;
+          diffview = true;
           treesitter_context = true;
           grug_far = true;
           ufo = true;
