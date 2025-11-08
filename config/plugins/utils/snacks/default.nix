@@ -9,6 +9,7 @@
     ./git.nix
     ./rename.nix
     ./statuscolumn.nix
+    ./terminal.nix
   ];
 
   plugins.snacks.enable = true;

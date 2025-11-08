@@ -76,7 +76,7 @@
     ./plugins/utils/snacks/default.nix
     ./plugins/utils/yanky.nix
     # ./plugins/utils/telescope.nix
-    ./plugins/utils/toggleterm.nix
+    # ./plugins/utils/toggleterm.nix
     ./plugins/utils/web-devicons.nix
     ./plugins/utils/whichkey.nix
   ];
