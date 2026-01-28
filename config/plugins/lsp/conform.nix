@@ -155,8 +155,8 @@
           isort = {
             command = "${lib.getExe pkgs.isort}";
           };
-          nixfmt-rfc-style = {
-            command = "${lib.getExe pkgs.nixfmt-rfc-style}";
+          nixfmt = {
+            command = "${lib.getExe pkgs.nixfmt}";
           };
           alejandra = {
             command = "${lib.getExe pkgs.alejandra}";
