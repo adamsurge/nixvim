@@ -19,7 +19,7 @@
   keymaps = [
     {
       mode = ["n"];
-      key = "<leader>o";
+      key = "<leader>oo";
       action = "<cmd>Oil<cr>";
       options = {desc = "Open parent directory";};
     }

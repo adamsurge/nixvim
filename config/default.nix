@@ -4,6 +4,7 @@
     ./plugins/ai/avante.nix
     ./plugins/ai/copilot.nix
     ./plugins/ai/mcphub.nix
+    ./plugins/ai/opencode.nix
 
     # General Configuration
     ./auto_cmds.nix
