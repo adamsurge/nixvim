@@ -33,4 +33,15 @@
         '';
     };
   };
+
+  keymaps = [
+    {
+      mode = ["n" "x"];
+      key = "<leader>a";
+      action = "";
+      options = {
+        desc = "avante";
+      };
+    }
+  ];
 }
