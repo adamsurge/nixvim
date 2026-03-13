@@ -5,7 +5,7 @@
     settings = {
       port = 8080;
 
-      provider = {
+      server = {
         enabled = "snacks";
         snacks = {
           auto_close = true;
