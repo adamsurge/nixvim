@@ -1,9 +1,9 @@
 {
   imports = [
     # AI
-    ./plugins/ai/avante.nix
+    # ./plugins/ai/avante.nix
     ./plugins/ai/copilot.nix
-    ./plugins/ai/mcphub.nix
+    # ./plugins/ai/mcphub.nix
     ./plugins/ai/opencode.nix
 
     # General Configuration
