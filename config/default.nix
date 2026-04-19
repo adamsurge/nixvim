@@ -44,11 +44,12 @@
     ./plugins/langs/godot.nix
     # ./plugins/langs/rust.nix
 
-    # LSP and formatting
+    # LSP, formatting, debugging, testing
     ./plugins/lsp/conform.nix
     ./plugins/lsp/dap.nix
     ./plugins/lsp/fidget.nix
     ./plugins/lsp/lsp.nix
+    ./plugins/lsp/neotest.nix
     ./plugins/lsp/trouble.nix
 
     # Snippets
