@@ -30,9 +30,9 @@
       callback = {
         __raw = ''
           function()
+            _G._copilot_load_state()
             if not vim.g.COPILOT_ENABLED then
               vim.cmd("Copilot disable")
-              print("Copilot disabled on startup")
             end
           end
         '';
@@ -41,37 +41,47 @@
   ];
 
   extraConfigLua = ''
-    -- CopilotEnable: enable Copilot suggestions globally
+    local state_file = vim.fn.stdpath("state") .. "/copilot_enabled"
+
+    local function write_state(enabled)
+      local fd = io.open(state_file, "w")
+      if fd then
+        fd:write(enabled and "1" or "0")
+        fd:close()
+      end
+    end
+
+    _G._copilot_load_state = function()
+      local fd = io.open(state_file, "r")
+      if not fd then
+        vim.g.COPILOT_ENABLED = false
+        return
+      end
+      local contents = fd:read("*a") or ""
+      fd:close()
+      vim.g.COPILOT_ENABLED = contents:match("^1") ~= nil
+    end
+
     vim.api.nvim_create_user_command("CopilotEnable", function()
       vim.g.COPILOT_ENABLED = true
+      write_state(true)
       vim.cmd("Copilot enable")
       vim.notify("Copilot enabled globally", vim.log.levels.INFO)
-    end, {
-      desc = "Enable Copilot suggestions globally",
-    })
+    end, {desc = "Enable Copilot suggestions globally"})
 
-    -- CopilotDisable: disable Copilot suggestions globally
     vim.api.nvim_create_user_command("CopilotDisable", function()
       vim.g.COPILOT_ENABLED = false
+      write_state(false)
       vim.cmd("Copilot disable")
       vim.notify("Copilot disabled globally", vim.log.levels.INFO)
-    end, {
-      desc = "Disable Copilot suggestions globally",
-    })
+    end, {desc = "Disable Copilot suggestions globally"})
 
-    -- CopilotToggle: flip Copilot state globally
     vim.api.nvim_create_user_command("CopilotToggle", function()
       if vim.g.COPILOT_ENABLED then
-        vim.g.copilot_enabled = false
-        vim.cmd("Copilot disable")
-        vim.notify("Copilot disabled globally", vim.log.levels.INFO)
+        vim.cmd("CopilotDisable")
       else
-        vim.g.cOPILOT_ENABLED = true
-        vim.cmd("Copilot enable")
-        vim.notify("Copilot enabled globally", vim.log.levels.INFO)
+        vim.cmd("CopilotEnable")
       end
-    end, {
-      desc = "Toggle Copilot suggestions globally",
-    })
+    end, {desc = "Toggle Copilot suggestions globally"})
   '';
 }
