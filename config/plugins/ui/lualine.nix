@@ -9,7 +9,7 @@
           "neo-tree"
         ];
         disabledFiletypes = {
-          statusline = ["startup" "alpha"];
+          statusline = ["snacks_dashboard"];
         };
         theme = "catppuccin-mocha";
       };
