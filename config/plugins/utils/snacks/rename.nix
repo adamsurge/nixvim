@@ -15,22 +15,14 @@
     })
 
     -- Integration with neo-tree for rename functionality
-    local events = require("neo-tree.events")
-    require("neo-tree").setup({
-      event_handlers = {
-        {
-          event = events.FILE_MOVED,
-          handler = function(data)
-            Snacks.rename.on_rename_file(data.source, data.destination)
-          end,
-        },
-        {
-          event = events.FILE_RENAMED,
-          handler = function(data)
-            Snacks.rename.on_rename_file(data.source, data.destination)
-          end,
-        },
-      },
-    })
+    vim.schedule(function()
+      local ok, events = pcall(require, "neo-tree.events")
+      if not ok then return end
+      local handler = function(data)
+        Snacks.rename.on_rename_file(data.source, data.destination)
+      end
+      events.subscribe({event = events.FILE_MOVED, handler = handler})
+      events.subscribe({event = events.FILE_RENAMED, handler = handler})
+    end)
   '';
 }
