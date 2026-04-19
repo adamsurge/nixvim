@@ -16,6 +16,7 @@
         };
       };
       surround = {};
+      pairs = {};
       comment = {
         mappings = {
           # Toggle comment (like `gcip` - comment inner paragraph) for both
