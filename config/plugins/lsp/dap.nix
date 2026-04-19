@@ -61,6 +61,11 @@
       local dap = require "dap"
       local ui = require "dapui"
 
+      _G.dap_get_args = function(config)
+        config.args = vim.split(vim.fn.input("Run args: "), " ")
+        return config
+      end
+
       dap.listeners.before.attach.dapui_config = function()
         ui.open()
       end
@@ -108,7 +113,7 @@
     {
       mode = "n";
       key = "<leader>da";
-      action = "<cmd>lua require('dap').continue({ before = get_args })<cr>";
+      action = "<cmd>lua require('dap').continue({ before = dap_get_args })<cr>";
       options = {
         silent = true;
         desc = "Run with Args";
