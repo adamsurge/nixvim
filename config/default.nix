@@ -42,7 +42,7 @@
 
     # Languages
     ./plugins/langs/godot.nix
-    # ./plugins/langs/rust.nix
+    ./plugins/langs/rust.nix
 
     # LSP, formatting, debugging, testing
     ./plugins/lsp/conform.nix
