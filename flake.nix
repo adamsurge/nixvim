@@ -11,14 +11,6 @@
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
     };
-    mcp-hub = {
-      url = "github:ravitemer/mcp-hub";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    mcphub-nvim = {
-      url = "github:ravitemer/mcphub.nvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -26,7 +18,6 @@
     nixvim,
     flake-parts,
     pre-commit-hooks,
-    mcphub-nvim,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -42,13 +33,10 @@
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
 
-        mcp-hub = inputs.mcp-hub.packages."${system}".default;
-        mcphub-nvim = inputs.mcphub-nvim.packages.${system}.default;
-
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
           module = ./config;
-          extraSpecialArgs = {inherit mcphub-nvim mcp-hub system;};
+          extraSpecialArgs = {inherit system;};
         };
       in {
         checks = {
