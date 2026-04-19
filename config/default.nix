@@ -23,6 +23,7 @@
     ./plugins/editor/indent-blankline.nix
     ./plugins/editor/marks.nix
     ./plugins/editor/navic.nix
+    ./plugins/editor/neogen.nix
     ./plugins/editor/neo-tree.nix
     ./plugins/editor/oil.nix
     ./plugins/editor/render-markdown.nix
