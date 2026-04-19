@@ -225,11 +225,6 @@
       action = ".<c-g>u";
     }
     {
-      mode = "i";
-      key = ";";
-      action = ";<c-g>u";
-    }
-    {
       mode = ["i" "x" "n" "s"];
       key = "<C-s>";
       action = "<cmd>w<cr><esc>";
@@ -312,50 +307,32 @@
     }
     {
       mode = "n";
-      key = "<leader>cd";
-      action = "vim.diagnostic.open_float";
-      options = {desc = "Line Diagnostics";};
-    }
-    {
-      mode = "n";
       key = "<leader>ch";
       action = "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>";
       options = {desc = "Toggle Inlay Hints";};
     }
     {
       mode = "n";
-      key = "]d";
-      action = "diagnostic_goto(true)";
-      options = {desc = "Next Diagnostic";};
-    }
-    {
-      mode = "n";
-      key = "[d";
-      action = "diagnostic_goto(false)";
-      options = {desc = "Prev Diagnostic";};
-    }
-    {
-      mode = "n";
       key = "]e";
-      action = "diagnostic_goto(true 'ERROR')";
+      action = "<cmd>lua vim.diagnostic.jump({count=1,severity=vim.diagnostic.severity.ERROR})<cr>";
       options = {desc = "Next Error";};
     }
     {
       mode = "n";
       key = "[e";
-      action = "diagnostic_goto(false 'ERROR')";
+      action = "<cmd>lua vim.diagnostic.jump({count=-1,severity=vim.diagnostic.severity.ERROR})<cr>";
       options = {desc = "Prev Error";};
     }
     {
       mode = "n";
       key = "]w";
-      action = "diagnostic_goto(true 'WARN')";
+      action = "<cmd>lua vim.diagnostic.jump({count=1,severity=vim.diagnostic.severity.WARN})<cr>";
       options = {desc = "Next Warning";};
     }
     {
       mode = "n";
       key = "[w";
-      action = "diagnostic_goto(false 'WARN')";
+      action = "<cmd>lua vim.diagnostic.jump({count=-1,severity=vim.diagnostic.severity.WARN})<cr>";
       options = {desc = "Prev Warning";};
     }
     # Quit keymap grouping
@@ -385,7 +362,7 @@
     {
       mode = "n";
       key = "<leader>ui";
-      action = "vim.show_pos";
+      action = "<cmd>lua vim.show_pos()<cr>";
       options = {desc = "Inspect Pos";};
     }
     {
