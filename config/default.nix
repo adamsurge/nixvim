@@ -69,6 +69,7 @@
     ./plugins/utils/extra_plugins.nix
     ./plugins/utils/lazyloader.nix
     ./plugins/utils/mini.nix
+    ./plugins/utils/persistence.nix
     ./plugins/utils/snacks/default.nix
     ./plugins/utils/web-devicons.nix
     ./plugins/utils/whichkey.nix
