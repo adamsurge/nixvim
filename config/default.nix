@@ -31,6 +31,7 @@
     ./plugins/editor/treesj.nix
     ./plugins/editor/ufo.nix
     ./plugins/editor/undotree.nix
+    ./plugins/editor/yanky.nix
     ./plugins/editor/zellij-nav.nix
 
     # Git
@@ -66,7 +67,6 @@
     ./plugins/utils/lazyloader.nix
     ./plugins/utils/mini.nix
     ./plugins/utils/snacks/default.nix
-    ./plugins/utils/yanky.nix
     ./plugins/utils/web-devicons.nix
     ./plugins/utils/whichkey.nix
   ];
