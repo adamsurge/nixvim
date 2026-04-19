@@ -20,7 +20,6 @@
     # Editor plugins and configurations
     ./plugins/editor/aerial.nix
     ./plugins/editor/arrow.nix
-    # ./plugins/editor/copilot-chat.nix
     ./plugins/editor/flash.nix
     ./plugins/editor/grug-far.nix
     ./plugins/editor/illuminate.nix
@@ -40,7 +39,6 @@
     # Git
     ./plugins/git/diffview.nix
     ./plugins/git/gitsigns.nix
-    # ./plugins/git/lazygit.nix
 
     # Languages
     ./plugins/langs/godot.nix
@@ -69,14 +67,9 @@
     # Utils
     ./plugins/utils/extra_plugins.nix
     ./plugins/utils/lazyloader.nix
-    # ./plugins/utils/markdown-preview.nix
     ./plugins/utils/mini.nix
-    # ./plugins/utils/neoclip.nix
-    # ./plugins/utils/obsidian.nix
     ./plugins/utils/snacks/default.nix
     ./plugins/utils/yanky.nix
-    # ./plugins/utils/telescope.nix
-    # ./plugins/utils/toggleterm.nix
     ./plugins/utils/web-devicons.nix
     ./plugins/utils/whichkey.nix
   ];
