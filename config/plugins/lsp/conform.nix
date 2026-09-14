@@ -7,6 +7,7 @@
     extraPackages = with pkgs; [
       # lldb
       rustfmt
+      gdtoolkit_4
     ];
 
     extraConfigLuaPre =
@@ -125,7 +126,9 @@
             "isort"
           ];
           rust = ["rustfmt"];
+          gdscript = ["gdformat"];
           lua = ["stylua"];
+
           nix = ["alejandra"];
           markdown = {
             __unkeyed-1 = "prettierd";

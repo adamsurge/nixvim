@@ -5,6 +5,10 @@
       settings = {
         indent.enable = true;
         highlight.enable = true;
+        ensure_installed = [
+          "gdscript"
+          "godot_resource"
+        ];
         treesitter-textobjects = {
           enable = false;
           select = {
