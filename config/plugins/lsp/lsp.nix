@@ -127,6 +127,10 @@
           };
         };
         diagnostic = {
+          "gl" = {
+            action = "open_float";
+            desc = "Line Diagnostics";
+          };
           "<leader>cd" = {
             action = "open_float";
             desc = "Line Diagnostics";
