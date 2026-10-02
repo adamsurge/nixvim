@@ -1,4 +1,22 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: let
+  nvimUfo = pkgs.vimPlugins.nvim-ufo.overrideAttrs (old: {
+    postInstall =
+      (old.postInstall or "")
+      + ''
+        substituteInPlace $out/lua/ufo/fold/init.lua \
+          $out/lua/ufo/preview/init.lua \
+          $out/lua/ufo/provider/lsp/nvim.lua \
+          --replace-fail "require('async')" "require('ufo-async')"
+        cp ${pkgs.vimPlugins.promise-async}/lua/promise.lua $out/lua/
+        cp ${pkgs.vimPlugins.promise-async}/lua/async.lua $out/lua/ufo-async.lua
+        cp -r ${pkgs.vimPlugins.promise-async}/lua/promise-async $out/lua/
+      '';
+  });
+in {
   opts = {
     foldcolumn = "1";
     foldlevel = 99;
@@ -8,6 +26,7 @@
 
   plugins.nvim-ufo = {
     enable = true;
+    package = nvimUfo;
     settings = {
       provider_selector = ''
         function(bufnr, filetype, buftype)
