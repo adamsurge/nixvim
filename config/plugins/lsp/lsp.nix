@@ -72,7 +72,7 @@
             settings = {
               yaml = {
                 schemas = {
-                  kubernetes = "'*.yaml";
+                  kubernetes = "*.yaml";
                   "http://json.schemastore.org/github-workflow" = ".github/workflows/*";
                   "http://json.schemastore.org/github-action" = ".github/action.{yml,yaml}";
                   "http://json.schemastore.org/ansible-stable-2.9" = "roles/tasks/*.{yml,yaml}";
@@ -154,16 +154,20 @@
   extraConfigLua = ''
     local _border = "rounded"
 
-    vim.lsp.handlers["textDocument/hover"] = function(err, result, ctx, config)
-      config = config or {}
-      config.border = _border
-      return vim.lsp.handlers.hover(err, result, ctx, config)
+    local hover = vim.lsp.handlers["textDocument/hover"]
+    if hover then
+      vim.lsp.handlers["textDocument/hover"] = function(err, result, ctx, config)
+        config = vim.tbl_deep_extend("force", config or {}, { border = _border })
+        return hover(err, result, ctx, config)
+      end
     end
 
-    vim.lsp.handlers["textDocument/signatureHelp"] = function(err, result, ctx, config)
-      config = config or {}
-      config.border = _border
-      return vim.lsp.handlers.signature_help(err, result, ctx, config)
+    local signature_help = vim.lsp.handlers["textDocument/signatureHelp"]
+    if signature_help then
+      vim.lsp.handlers["textDocument/signatureHelp"] = function(err, result, ctx, config)
+        config = vim.tbl_deep_extend("force", config or {}, { border = _border })
+        return signature_help(err, result, ctx, config)
+      end
     end
 
     vim.diagnostic.config{

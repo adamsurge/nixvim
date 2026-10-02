@@ -80,7 +80,7 @@
                 end
               end
 
-              return { timeout_ms = 200, lsp_fallback = true }, on_format
+              return { timeout_ms = 200, lsp_format = "fallback" }, on_format
              end
           '';
 
@@ -96,7 +96,7 @@
                 return
               end
 
-              return { lsp_fallback = true }
+              return { lsp_format = "fallback" }
             end
           '';
         notify_on_error = true;
