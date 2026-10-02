@@ -66,7 +66,6 @@ Manual smoke checks after building: run the built `nvim`, use `:checkhealth snac
 
 ### AI
 
-- `copilot.nix`: Configures Copilot suggestions with persistent enable/disable state. Use `:Copilot auth` to sign in.
 - `opencode.nix`: Configures the opencode AI assistant.
 
 ### Themes

@@ -1,7 +1,6 @@
 {
   imports = [
     # AI
-    ./plugins/ai/copilot.nix
     ./plugins/ai/opencode.nix
 
     # General Configuration
