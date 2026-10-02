@@ -61,25 +61,12 @@
           which_key = true;
           flash = true;
           fidget = true;
-          illuminate = {
-            enabled = true;
-            lsp = true;
-          };
           navic = {
             enabled = true;
             custom_bg = "lualine";
           };
           treesitter = true;
           telescope = true;
-          indent_blankline = {
-            enabled = true;
-            scope_color = "lavender";
-            colored_indent_levels = true;
-          };
-          mini = {
-            enabled = true;
-            indentscope_color = "lavender";
-          };
           native_lsp = {
             enabled = true;
             inlay_hints = {

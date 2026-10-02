@@ -221,6 +221,12 @@
     }
     {
       mode = "n";
+      key = "<leader>e";
+      action = "<cmd>lua Snacks.picker.explorer()<CR>";
+      options = {desc = "Explorer";};
+    }
+    {
+      mode = "n";
       key = "<leader>fe";
       action = "<cmd>lua Snacks.picker.explorer()<CR>";
       options = {desc = "File browser";};
@@ -229,7 +235,13 @@
       mode = "n";
       key = "<leader>fE";
       action = "<cmd>lua Snacks.picker.explorer({cwd = vim.fn.expand('%:p:h')})<CR>";
-      options = {desc = "File browser";};
+      options = {desc = "Explorer at current file";};
+    }
+    {
+      mode = "n";
+      key = "<leader>su";
+      action = "<cmd>lua Snacks.picker.undo()<CR>";
+      options = {desc = "Undo history";};
     }
   ];
 }

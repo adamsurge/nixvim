@@ -1,8 +1,12 @@
 {
   imports = [
+    ./indent.nix
     ./input.nix
-    ./quickfile.nix
+    ./notifier.nix
     ./picker.nix
+    ./profiler.nix
+    ./quickfile.nix
+    ./words.nix
     ./bufdelete.nix
     ./bigfile.nix
     ./dashboard.nix

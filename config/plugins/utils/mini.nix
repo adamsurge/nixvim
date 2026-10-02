@@ -3,18 +3,6 @@
     enable = true;
 
     modules = {
-      indentscope = {
-        symbol = "│";
-        draw = {
-          delay = 0;
-          animation = {
-            __raw = ''function () return 0 end'';
-          };
-        };
-        options = {
-          try_as_border = true;
-        };
-      };
       surround = {};
       pairs = {};
       comment = {

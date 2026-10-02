@@ -67,20 +67,16 @@ home-manager.users.<user>.home.packages = [
 - `arrow.nix`: Configures the arrow plugin, adds file bookmarks.
 - `flash.nix`: Configures the flash plugin, better navigation in buffers.
 - `grug-far.nix`: Configures the grug-far plugin, easier find/replace.
-- `illuminate.nix`: Configures the Illuminate plugin for highlighting other uses of the current word under the cursor.
-- `indent-blankline.nix`: Configures the Indent Blankline plugin for displaying indentation levels.
 - `marks.nix`: Configures the marks plugin, better interacting with marks.
 - `navic.nix`: Configures the Navic plugin, shows the current code context.
 - `neogen.nix`: Configures the Neogen plugin for generating docstrings/annotations.
-- `neo-tree.nix`: Configures the NeoTree file explorer.
-- `oil.nix`: Configures the oil file explorer.
+- `oil.nix`: Configures Oil editable directory buffers. Use `<leader>oo` to edit a directory; Snacks Explorer owns tree/sidebar browsing.
 - `refactoring.nix`: Configures the refactoring plugin for extract/inline operations.
 - `render-markdown.nix`: Configures the Render Markdown plugin for rendering markdown in the editor.
 - `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
 - `treesitter.nix`: Configures the TreeSitter syntax highlighter.
 - `treesj.nix`: Configures the treesj plugin for splitting/joining code blocks.
 - `ufo.nix`: Configures the nvim-ufo plugin for better folding with treesitter and indent providers.
-- `undotree.nix`: Configures the UndoTree undo history visualizer.
 - `yanky.nix`: Configures the Yanky plugin for enhanced yank operations and history.
 - `zellij-nav.nix`: Retained but disabled Zellij navigation integration. Native Neovim split navigation owns `<C-h/j/k/l>` and `<C-Left/Down/Up/Right>`. To re-enable Zellij, restore `./plugins/editor/zellij-nav.nix` in `config/default.nix` and disable or make these normal-mode native mappings conditional in `config/keymaps.nix` to avoid duplicate mappings.
 
@@ -112,7 +108,7 @@ home-manager.users.<user>.home.packages = [
 - `lazyloader.nix`: Enables lazy loading with ln-z.
 - `mini.nix`: Configures the Mini plugin.
 - `persistence.nix`: Configures persistence.nvim for session save/restore.
-- `snacks/`: Modular snacks.nvim config (dashboard, picker, terminal, lazygit, rename, input, statuscolumn, bigfile, quickfile, bufdelete, git).
+- `snacks/`: Modular Snacks platform. Picker provides explorer (`<leader>e`, `<leader>fe`, `<leader>fE`), search, and undo history (`<leader>su`); words provides reference highlights and `[[`/`]]` navigation; indent/scope provides indentation display; notifier owns visible notifications; profiler remains opt-in. Oil remains separate for editable directory buffers.
 - `web-devicons.nix`: Configures web devicons for file type icons.
 - `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
 

@@ -19,12 +19,9 @@
     ./plugins/editor/arrow.nix
     ./plugins/editor/flash.nix
     ./plugins/editor/grug-far.nix
-    ./plugins/editor/illuminate.nix
-    ./plugins/editor/indent-blankline.nix
     ./plugins/editor/marks.nix
     ./plugins/editor/navic.nix
     ./plugins/editor/neogen.nix
-    ./plugins/editor/neo-tree.nix
     ./plugins/editor/oil.nix
     ./plugins/editor/refactoring.nix
     ./plugins/editor/render-markdown.nix
@@ -32,7 +29,6 @@
     ./plugins/editor/treesitter.nix
     ./plugins/editor/treesj.nix
     ./plugins/editor/ufo.nix
-    ./plugins/editor/undotree.nix
     ./plugins/editor/yanky.nix
 
     # Git

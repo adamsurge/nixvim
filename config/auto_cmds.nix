@@ -1,7 +1,6 @@
 {
   autoGroups = {
     highlight_yank = {};
-    indentscope = {};
     restore_cursor = {};
   };
 
@@ -14,25 +13,6 @@
         __raw = ''
           function()
             vim.hl.on_yank()
-          end
-        '';
-      };
-    }
-    {
-      group = "indentscope";
-      event = ["FileType"];
-      pattern = [
-        "help"
-        "neo-tree"
-        "Trouble"
-        "trouble"
-        "notify"
-        "snacks_dashboard"
-      ];
-      callback = {
-        __raw = ''
-          function()
-            vim.b.miniindentscope_disable = true
           end
         '';
       };

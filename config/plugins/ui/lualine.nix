@@ -4,10 +4,7 @@
     settings = {
       options = {
         globalstatus = true;
-        extensions = [
-          "fzf"
-          "neo-tree"
-        ];
+        extensions = ["fzf"];
         disabledFiletypes = {
           statusline = ["snacks_dashboard"];
         };

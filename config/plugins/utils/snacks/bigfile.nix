@@ -14,15 +14,8 @@
           vim.lsp.buf_detach_client(ctx.buf, client.id)
         end
 
-        -- Disable vim-illuminate (buffer-local)
-        pcall(function()
-          require('illuminate').pause_buf(ctx.buf)
-        end)
-
-        -- Disable indent-blankline (buffer-local)
-        pcall(function()
-          require('ibl').setup_buffer(ctx.buf, { enabled = false })
-        end)
+        vim.b[ctx.buf].snacks_indent = false
+        vim.b[ctx.buf].snacks_words = false
 
         -- Disable gitsigns (detach from buffer)
         pcall(function()
