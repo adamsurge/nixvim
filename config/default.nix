@@ -34,7 +34,6 @@
     ./plugins/editor/ufo.nix
     ./plugins/editor/undotree.nix
     ./plugins/editor/yanky.nix
-    ./plugins/editor/zellij-nav.nix
 
     # Git
     ./plugins/git/diffview.nix

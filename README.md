@@ -82,7 +82,7 @@ home-manager.users.<user>.home.packages = [
 - `ufo.nix`: Configures the nvim-ufo plugin for better folding with treesitter and indent providers.
 - `undotree.nix`: Configures the UndoTree undo history visualizer.
 - `yanky.nix`: Configures the Yanky plugin for enhanced yank operations and history.
-- `zellij-nav.nix`: Configures Zellij navigation integration.
+- `zellij-nav.nix`: Retained but disabled Zellij navigation integration. Native Neovim split navigation owns `<C-h/j/k/l>` and `<C-Left/Down/Up/Right>`. To re-enable Zellij, restore `./plugins/editor/zellij-nav.nix` in `config/default.nix` and disable or make these normal-mode native mappings conditional in `config/keymaps.nix` to avoid duplicate mappings.
 
 ### UI Plugins
 
