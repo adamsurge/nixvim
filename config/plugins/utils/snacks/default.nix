@@ -11,6 +11,7 @@
     ./bigfile.nix
     ./dashboard.nix
     ./git.nix
+    ./guide.nix
     ./rename.nix
     ./statuscolumn.nix
     ./terminal.nix

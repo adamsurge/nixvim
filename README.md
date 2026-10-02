@@ -34,6 +34,27 @@ home-manager.users.<user>.home.packages = [
 ];
 ```
 
+## Workflow cheat sheet
+
+- `:PluginGuide` or `<leader>?`: task-oriented workflow guide. `<leader>sk` searches every active mapping.
+- Find/search: `<leader><space>` or `<leader>ff` finds files; `<leader>ft` searches text; `<leader>sr` opens search/replace.
+- Browse/edit files: `<leader>e` opens Snacks Explorer; `<leader>fE` explores from current file; `<leader>oo` opens Oil editable directory buffer.
+- Undo/references: `<leader>su` opens undo history; `]]` and `[[` jump references.
+- Quickfix: Snacks Picker `<C-q>` populates lists; `<leader>co` opens quickfix and `<leader>cl` opens location list with Quicker editing support. `<leader>dT` opens Trouble diagnostics.
+- Git: `<leader>gg` opens Lazygit; `<leader>gs` opens Git status picker.
+- Tests/debugging: `<leader>Tr`, `<leader>Tf`, and `<leader>Ta` run nearest, file, and workspace tests; `<leader>db` toggles a breakpoint and `<leader>dc` continues debugging.
+- Sessions/outline: `<leader>qs`, `<leader>ql`, and `<leader>qd` manage sessions; `<leader>uo` toggles code outline.
+
+## Validation
+
+```sh
+nix fmt -- --check .
+nix flake check
+nix build .#default
+```
+
+Manual smoke checks after building: run the built `nvim`, use `:checkhealth snacks` and `:checkhealth quicker`, then test split navigation, explorer, Oil, undo, references, quickfix/location lists, formatting, hover, and signature help. Clipboard, external Godot language servers, terminal UI, and profiler results require host-specific interactive testing.
+
 ## Plugins
 
 ### General Configuration

@@ -14,6 +14,12 @@
       '';
       keys = [
         {
+          icon = " ";
+          key = "?";
+          desc = "Workflow Guide";
+          action = "<cmd>PluginGuide<CR>";
+        }
+        {
           icon = " ";
           key = "f";
           desc = "Find File";
