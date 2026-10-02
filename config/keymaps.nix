@@ -312,6 +312,34 @@
     }
     {
       mode = "n";
+      key = "<leader>co";
+      action.__raw = ''
+        function()
+          if vim.fn.getqflist({ size = 0 }).size == 0 then
+            vim.notify("Quickfix list is empty", vim.log.levels.INFO)
+            return
+          end
+          vim.cmd.copen()
+        end
+      '';
+      options = {desc = "Open Quickfix List";};
+    }
+    {
+      mode = "n";
+      key = "<leader>cl";
+      action.__raw = ''
+        function()
+          if vim.fn.getloclist(0, { size = 0 }).size == 0 then
+            vim.notify("Location list is empty", vim.log.levels.INFO)
+            return
+          end
+          vim.cmd.lopen()
+        end
+      '';
+      options = {desc = "Open Location List";};
+    }
+    {
+      mode = "n";
       key = "]e";
       action = "<cmd>lua vim.diagnostic.jump({count=1,severity=vim.diagnostic.severity.ERROR})<cr>";
       options = {desc = "Next Error";};

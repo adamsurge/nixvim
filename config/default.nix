@@ -23,6 +23,7 @@
     ./plugins/editor/navic.nix
     ./plugins/editor/neogen.nix
     ./plugins/editor/oil.nix
+    ./plugins/editor/quicker.nix
     ./plugins/editor/refactoring.nix
     ./plugins/editor/render-markdown.nix
     ./plugins/editor/todo-comments.nix

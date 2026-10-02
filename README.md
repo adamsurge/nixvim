@@ -71,6 +71,7 @@ home-manager.users.<user>.home.packages = [
 - `navic.nix`: Configures the Navic plugin, shows the current code context.
 - `neogen.nix`: Configures the Neogen plugin for generating docstrings/annotations.
 - `oil.nix`: Configures Oil editable directory buffers. Use `<leader>oo` to edit a directory; Snacks Explorer owns tree/sidebar browsing.
+- `quicker.nix`: Configures Quicker for editable native quickfix and location-list buffers. Use `<leader>co` and `<leader>cl` to open them; Snacks Picker populates lists and Trouble remains diagnostics-oriented.
 - `refactoring.nix`: Configures the refactoring plugin for extract/inline operations.
 - `render-markdown.nix`: Configures the Render Markdown plugin for rendering markdown in the editor.
 - `todo-comments.nix`: Configures the Todo Comments plugin for highlighting TODO comments.
@@ -123,7 +124,6 @@ Please refer to the individual `.nix` files for more detailed configuration info
 
 Possible plugins to look into adding.
 
-- [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf) - Better quickfix (don't really use this at the moment but look into it)
 - [Neorg](https://github.com/nvim-neorg/neorg?tab=readme-ov-file) - Note taking
 
 ## References
