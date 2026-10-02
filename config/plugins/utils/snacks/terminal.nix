@@ -39,6 +39,41 @@ in {
       };
     }
 
+    # Terminal in a new Neovim tab
+    {
+      mode = "n";
+      key = "<leader>tn";
+      action.__raw = ''
+        function()
+          vim.cmd.tabnew()
+          vim.wo.winbar = ""
+          vim.fn.termopen(vim.o.shell, { env = ${terminalEnv} })
+          vim.cmd.startinsert()
+        end
+      '';
+      options = {
+        desc = "Terminal (new tab)";
+      };
+    }
+
+    # Switch tabs without leaving terminal job mode
+    {
+      mode = "t";
+      key = "<S-h>";
+      action = "<C-\\><C-n><cmd>tabprevious<cr>";
+      options = {
+        desc = "Previous Tab";
+      };
+    }
+    {
+      mode = "t";
+      key = "<S-l>";
+      action = "<C-\\><C-n><cmd>tabnext<cr>";
+      options = {
+        desc = "Next Tab";
+      };
+    }
+
     # Vertical split terminal
     {
       mode = "n";
