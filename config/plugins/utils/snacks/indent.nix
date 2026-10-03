@@ -1,13 +1,14 @@
 {
-  plugins.snacks.settings = {
-    indent = {
-      enabled = true;
+  plugins.snacks = {
+    settings = {
       indent = {
-        char = "│";
-      };
-      scope = {
         enabled = true;
-        char = "│";
+        scope = {
+          enabled = true;
+          underline = true;
+          treesitter.enabled = false;
+        };
+        animate = {enabled = false;};
       };
     };
   };
