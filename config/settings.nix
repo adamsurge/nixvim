@@ -6,10 +6,10 @@
   extraConfigLuaPre =
     # lua
     ''
-      vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticError", linehl = "", numhl = "" })
-      vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticWarn", linehl = "", numhl = "" })
+      vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "DiagnosticError", linehl = "", numhl = "" })
+      vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticWarn", linehl = "", numhl = "" })
       vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticHint", linehl = "", numhl = "" })
-      vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticInfo", linehl = "", numhl = "" })
+      vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticInfo", linehl = "", numhl = "" })
 
       vim.g.disable_autoformat = true;
     '';
@@ -70,6 +70,9 @@
 
     # Disable swap file creation
     swapfile = false;
+
+    # Persist undo history
+    undofile = true;
 
     # Time in milliseconds to wait for a mapped sequence to complete
     timeoutlen = 300;
