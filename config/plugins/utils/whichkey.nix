@@ -28,7 +28,7 @@
       }
       {
         __unkeyed-1 = "<leader>t";
-        group = "terminal/test";
+        group = "terminal";
       }
     ];
   };
