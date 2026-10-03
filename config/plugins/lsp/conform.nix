@@ -116,6 +116,7 @@ _: {
             "isort"
           ];
           rust = ["rustfmt"];
+          go = ["gofmt"];
           gdscript = ["gdformat"];
           lua = ["stylua"];
 
@@ -173,6 +174,9 @@ _: {
           };
           bicep = {
             command = "bicep";
+          };
+          gofmt = {
+            command = "gofmt";
           };
         };
       };
