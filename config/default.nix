@@ -61,8 +61,6 @@
     ./plugins/ui/nui.nix
 
     # Utils
-    ./plugins/utils/extra_plugins.nix
-    ./plugins/utils/lazyloader.nix
     ./plugins/utils/mini.nix
     ./plugins/utils/persistence.nix
     ./plugins/utils/snacks/default.nix
