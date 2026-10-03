@@ -96,8 +96,14 @@
     {
       mode = "n";
       key = "<leader>b";
-      action = "<cmd>lua Snacks.picker.buffers()<CR>";
+      action = "";
       options = {desc = "+buffer";};
+    }
+    {
+      mode = "n";
+      key = "<leader>bb";
+      action = "<cmd>lua Snacks.picker.buffers()<CR>";
+      options = {desc = "Buffers";};
     }
     {
       mode = "n";

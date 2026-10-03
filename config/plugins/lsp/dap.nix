@@ -101,6 +101,12 @@
   keymaps = [
     {
       mode = "n";
+      key = "<leader>d";
+      action = "";
+      options.desc = "+debug";
+    }
+    {
+      mode = "n";
       key = "<leader>dB";
       action = "
         <cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>
