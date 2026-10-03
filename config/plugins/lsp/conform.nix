@@ -143,7 +143,6 @@
           terraform = ["terraform_fmt"];
           bicep = ["bicep"];
           bash = [
-            "shellcheck"
             "shellharden"
             "shfmt"
           ];
