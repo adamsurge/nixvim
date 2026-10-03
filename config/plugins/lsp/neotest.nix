@@ -21,10 +21,6 @@
     neotest-go
   ];
 
-  extraPackages = with pkgs; [
-    go
-  ];
-
   keymaps = [
     {
       mode = "n";

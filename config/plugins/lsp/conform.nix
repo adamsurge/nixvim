@@ -1,15 +1,5 @@
-{
-  lib,
-  pkgs,
-  ...
-}: {
+_: {
   config = {
-    extraPackages = with pkgs; [
-      # lldb
-      rustfmt
-      gdtoolkit_4
-    ];
-
     extraConfigLuaPre =
       # lua
       ''
@@ -152,41 +142,38 @@
 
         formatters = {
           black = {
-            command = "${lib.getExe pkgs.black}";
+            command = "black";
           };
           isort = {
-            command = "${lib.getExe pkgs.isort}";
+            command = "isort";
           };
           nixfmt = {
-            command = "${lib.getExe pkgs.nixfmt}";
+            command = "nixfmt";
           };
           alejandra = {
-            command = "${lib.getExe pkgs.alejandra}";
+            command = "alejandra";
           };
           jq = {
-            command = "${lib.getExe pkgs.jq}";
+            command = "jq";
           };
           prettierd = {
-            command = "${lib.getExe pkgs.prettierd}";
+            command = "prettierd";
           };
           stylua = {
-            command = "${lib.getExe pkgs.stylua}";
+            command = "stylua";
           };
           shellcheck = {
-            command = "${lib.getExe pkgs.shellcheck}";
+            command = "shellcheck";
           };
           shfmt = {
-            command = "${lib.getExe pkgs.shfmt}";
+            command = "shfmt";
           };
           shellharden = {
-            command = "${lib.getExe pkgs.shellharden}";
+            command = "shellharden";
           };
           bicep = {
-            command = "${lib.getExe pkgs.bicep}";
+            command = "bicep";
           };
-          #yamlfmt = {
-          #  command = "${lib.getExe pkgs.yamlfmt}";
-          #};
         };
       };
     };
