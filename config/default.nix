@@ -45,6 +45,7 @@
     ./plugins/lsp/fidget.nix
     ./plugins/lsp/lsp.nix
     ./plugins/lsp/neotest.nix
+    ./plugins/lsp/nvim-lint.nix
     ./plugins/lsp/trouble.nix
 
     # Snippets
