@@ -4,7 +4,27 @@
 
     modules = {
       surround = {};
-      pairs = {};
+      pairs = {
+        mappings = {
+          "(" = {
+            action = "open";
+            pair = "()";
+            neigh_pattern = "^[^\\][^%w]";
+          };
+
+          "[" = {
+            action = "open";
+            pair = "[]";
+            neigh_pattern = "^[^\\][^%w]";
+          };
+
+          "{" = {
+            action = "open";
+            pair = "{}";
+            neigh_pattern = "^[^\\][^%w]";
+          };
+        };
+      };
       comment = {
         mappings = {
           # Toggle comment (like `gcip` - comment inner paragraph) for both
